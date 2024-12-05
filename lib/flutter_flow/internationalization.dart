@@ -483,11 +483,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // Activity_1
   {
-    'zgce4rce': {
+    'lzgdpzyv': {
       'es': 'Actividades deportivas',
       'en': 'Sports activities',
     },
-    'kd6ngclp': {
+    'blitooxv': {
       'es': 'Elige tu deporte favorito y adquierelo ya',
       'en': 'Choose your favorite sport and buy it now',
     },
@@ -536,11 +536,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // Activity_2
   {
-    'f6ptdnc8': {
+    'n99cljat': {
       'es': 'Actividades deportivas',
       'en': 'Sports activities',
     },
-    'y86pef9j': {
+    'pgwb6wdp': {
       'es': 'Elige tu deporte favorito y adquierelo ya',
       'en': 'Choose your favorite sport and buy it now',
     },
@@ -587,11 +587,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // Activity_3
   {
-    'up4kke96': {
+    'nafd4efj': {
       'es': 'Actividades deportivas',
       'en': 'Sports activities',
     },
-    'a2fxxcpy': {
+    's48jwugb': {
       'es': 'Elige tu deporte favorito y adquierelo ya',
       'en': 'Choose your favorite sport and buy it now',
     },
@@ -638,11 +638,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // Activity_4
   {
-    '1o94kyh5': {
+    'j99qj0e8': {
       'es': 'Actividades deportivas',
       'en': 'Sports activities',
     },
-    'xfye6kqv': {
+    'uztozrnq': {
       'es': 'Elige tu deporte favorito y adquierelo ya',
       'en': 'Choose your favorite sport and buy it now',
     },
@@ -689,11 +689,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // Activity_5
   {
-    'fk8j1vn3': {
+    'e7jb866b': {
       'es': 'Actividades deportivas',
       'en': 'Sports activities',
     },
-    'p90ebrp2': {
+    '5ufhbcc2': {
       'es': 'Elige tu deporte favorito y adquierelo ya',
       'en': 'Choose your favorite sport and buy it now',
     },
@@ -1100,10 +1100,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'rru90kef': {
       'es': 'Date',
       'en': 'Date',
-    },
-    '6dbj2dos': {
-      'es': 'Dec 5, 2023 10:30 AM',
-      'en': 'Dec 5, 2023 10:30 AM',
     },
     'ma8q8a9v': {
       'es': 'Back to Home',

@@ -3,6 +3,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'pago_final_model.dart';
 export 'pago_final_model.dart';
 
@@ -35,6 +36,8 @@ class _PagoFinalWidgetState extends State<PagoFinalWidget> {
 
   @override
   Widget build(BuildContext context) {
+    context.watch<FFAppState>();
+
     return GestureDetector(
       onTap: () => FocusScope.of(context).unfocus(),
       child: Scaffold(
@@ -423,8 +426,11 @@ class _PagoFinalWidgetState extends State<PagoFinalWidget> {
                                           ),
                                     ),
                                     Text(
-                                      FFLocalizations.of(context).getText(
-                                        '6dbj2dos' /* Dec 5, 2023 10:30 AM */,
+                                      dateTimeFormat(
+                                        "yMMMd",
+                                        FFAppState().selectedDate,
+                                        locale: FFLocalizations.of(context)
+                                            .languageCode,
                                       ),
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium

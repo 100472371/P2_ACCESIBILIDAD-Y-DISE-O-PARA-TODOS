@@ -44,161 +44,154 @@ class _FAQsWidgetState extends State<FAQsWidget> {
           child: Column(
             mainAxisSize: MainAxisSize.max,
             children: [
-              if (responsiveVisibility(
-                context: context,
-                tabletLandscape: false,
-                desktop: false,
-              ))
-                Container(
-                  width: MediaQuery.sizeOf(context).width * 1.0,
-                  height: 120.0,
-                  decoration: const BoxDecoration(
-                    gradient: LinearGradient(
-                      colors: [Color(0xFF1A237E), Color(0xFF3949AB)],
-                      stops: [0.0, 1.0],
-                      begin: AlignmentDirectional(0.0, -1.0),
-                      end: AlignmentDirectional(0, 1.0),
-                    ),
+              Container(
+                width: MediaQuery.sizeOf(context).width * 1.0,
+                height: 120.0,
+                decoration: const BoxDecoration(
+                  gradient: LinearGradient(
+                    colors: [Color(0xFF1A237E), Color(0xFF3949AB)],
+                    stops: [0.0, 1.0],
+                    begin: AlignmentDirectional(0.0, -1.0),
+                    end: AlignmentDirectional(0, 1.0),
                   ),
-                  child: Stack(
-                    children: [
-                      Align(
-                        alignment: const AlignmentDirectional(0.0, -0.12),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
-                                  24.0, 24.0, 24.0, 0.0),
-                              child: Column(
-                                mainAxisSize: MainAxisSize.min,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Semantics(
-                                    label: 'Icono para cambiar el idioma',
-                                    child: InkWell(
-                                      splashColor: Colors.transparent,
-                                      focusColor: Colors.transparent,
-                                      hoverColor: Colors.transparent,
-                                      highlightColor: Colors.transparent,
-                                      onTap: () async {
-                                        await showModalBottomSheet(
-                                          isScrollControlled: true,
-                                          backgroundColor: Colors.transparent,
-                                          enableDrag: false,
-                                          context: context,
-                                          builder: (context) {
-                                            return GestureDetector(
-                                              onTap: () =>
-                                                  FocusScope.of(context)
-                                                      .unfocus(),
-                                              child: Padding(
-                                                padding:
-                                                    MediaQuery.viewInsetsOf(
-                                                        context),
-                                                child: const IdiomaWidget(),
-                                              ),
-                                            );
-                                          },
-                                        ).then((value) => safeSetState(() {}));
-                                      },
-                                      child: Icon(
-                                        Icons.language_sharp,
-                                        color: FlutterFlowTheme.of(context)
-                                            .primaryText,
-                                        size: 30.0,
-                                      ),
-                                    ),
-                                  ),
-                                  Align(
-                                    alignment: const AlignmentDirectional(1.0, 0.0),
-                                    child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
-                                          2.0, 0.0, 0.0, 0.0),
-                                      child: Text(
-                                        FFLocalizations.of(context).getText(
-                                          'zdyectkl' /* FAQs */,
-                                        ),
-                                        style: FlutterFlowTheme.of(context)
-                                            .headlineLarge
-                                            .override(
-                                              fontFamily: 'Inter Tight',
-                                              color: Colors.white,
-                                              letterSpacing: 0.0,
-                                              fontWeight: FontWeight.bold,
+                ),
+                child: Stack(
+                  children: [
+                    Align(
+                      alignment: const AlignmentDirectional(0.0, -0.12),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                24.0, 24.0, 24.0, 0.0),
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Semantics(
+                                  label: 'Icono para cambiar el idioma',
+                                  child: InkWell(
+                                    splashColor: Colors.transparent,
+                                    focusColor: Colors.transparent,
+                                    hoverColor: Colors.transparent,
+                                    highlightColor: Colors.transparent,
+                                    onTap: () async {
+                                      await showModalBottomSheet(
+                                        isScrollControlled: true,
+                                        backgroundColor: Colors.transparent,
+                                        enableDrag: false,
+                                        context: context,
+                                        builder: (context) {
+                                          return GestureDetector(
+                                            onTap: () => FocusScope.of(context)
+                                                .unfocus(),
+                                            child: Padding(
+                                              padding: MediaQuery.viewInsetsOf(
+                                                  context),
+                                              child: const IdiomaWidget(),
                                             ),
-                                      ),
+                                          );
+                                        },
+                                      ).then((value) => safeSetState(() {}));
+                                    },
+                                    child: Icon(
+                                      Icons.language_sharp,
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryText,
+                                      size: 30.0,
                                     ),
                                   ),
-                                  Padding(
+                                ),
+                                Align(
+                                  alignment: const AlignmentDirectional(1.0, 0.0),
+                                  child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
-                                        13.0, 0.0, 0.0, 0.0),
+                                        2.0, 0.0, 0.0, 0.0),
                                     child: Text(
                                       FFLocalizations.of(context).getText(
-                                        '75qm6jkc' /* Preguntas más frecuentes */,
+                                        'zdyectkl' /* FAQs */,
                                       ),
                                       style: FlutterFlowTheme.of(context)
-                                          .bodyLarge
+                                          .headlineLarge
                                           .override(
-                                            fontFamily: 'Inter',
-                                            color: const Color(0xFFE0E0E0),
+                                            fontFamily: 'Inter Tight',
+                                            color: Colors.white,
                                             letterSpacing: 0.0,
+                                            fontWeight: FontWeight.bold,
                                           ),
                                     ),
                                   ),
-                                ],
-                              ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                      13.0, 0.0, 0.0, 0.0),
+                                  child: Text(
+                                    FFLocalizations.of(context).getText(
+                                      '75qm6jkc' /* Preguntas más frecuentes */,
+                                    ),
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyLarge
+                                        .override(
+                                          fontFamily: 'Inter',
+                                          color: const Color(0xFFE0E0E0),
+                                          letterSpacing: 0.0,
+                                        ),
+                                  ),
+                                ),
+                              ],
                             ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
-                      Align(
-                        alignment: const AlignmentDirectional(-1.02, -0.36),
-                        child: Semantics(
-                          label: 'Icono para volver a la anterior página',
-                          child: InkWell(
-                            splashColor: Colors.transparent,
-                            focusColor: Colors.transparent,
-                            hoverColor: Colors.transparent,
-                            highlightColor: Colors.transparent,
-                            onTap: () async {
-                              context.safePop();
-                            },
-                            child: Icon(
-                              Icons.arrow_back,
-                              color: FlutterFlowTheme.of(context)
-                                  .primaryBackground,
-                              size: 30.0,
-                            ),
+                    ),
+                    Align(
+                      alignment: const AlignmentDirectional(-1.02, -0.36),
+                      child: Semantics(
+                        label: 'Icono para volver a la anterior página',
+                        child: InkWell(
+                          splashColor: Colors.transparent,
+                          focusColor: Colors.transparent,
+                          hoverColor: Colors.transparent,
+                          highlightColor: Colors.transparent,
+                          onTap: () async {
+                            context.safePop();
+                          },
+                          child: Icon(
+                            Icons.arrow_back,
+                            color:
+                                FlutterFlowTheme.of(context).primaryBackground,
+                            size: 30.0,
                           ),
                         ),
                       ),
-                      Align(
-                        alignment: const AlignmentDirectional(0.99, -0.43),
-                        child: Semantics(
-                          label: 'Icono para abrir el menú hamburguesa',
-                          child: InkWell(
-                            splashColor: Colors.transparent,
-                            focusColor: Colors.transparent,
-                            hoverColor: Colors.transparent,
-                            highlightColor: Colors.transparent,
-                            onTap: () async {
-                              scaffoldKey.currentState!.openEndDrawer();
-                            },
-                            child: Icon(
-                              Icons.menu,
-                              color: FlutterFlowTheme.of(context)
-                                  .primaryBackground,
-                              size: 30.0,
-                            ),
+                    ),
+                    Align(
+                      alignment: const AlignmentDirectional(0.99, -0.43),
+                      child: Semantics(
+                        label: 'Icono para abrir el menú hamburguesa',
+                        child: InkWell(
+                          splashColor: Colors.transparent,
+                          focusColor: Colors.transparent,
+                          hoverColor: Colors.transparent,
+                          highlightColor: Colors.transparent,
+                          onTap: () async {
+                            scaffoldKey.currentState!.openEndDrawer();
+                          },
+                          child: Icon(
+                            Icons.menu,
+                            color:
+                                FlutterFlowTheme.of(context).primaryBackground,
+                            size: 30.0,
                           ),
                         ),
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
+              ),
               SingleChildScrollView(
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
