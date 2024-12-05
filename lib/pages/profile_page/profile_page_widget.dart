@@ -22,6 +22,8 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => ProfilePageModel());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override
@@ -38,43 +40,52 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
-        appBar: AppBar(
-          backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
-          automaticallyImplyLeading: false,
-          leading: FlutterFlowIconButton(
-            borderColor: Colors.transparent,
-            borderRadius: 30.0,
-            borderWidth: 1.0,
-            buttonSize: 60.0,
-            icon: Icon(
-              Icons.arrow_back_rounded,
-              color: FlutterFlowTheme.of(context).primaryText,
-              size: 30.0,
-            ),
-            onPressed: () async {
-              context.pushNamed(
-                'HomePage',
-                extra: <String, dynamic>{
-                  kTransitionInfoKey: const TransitionInfo(
-                    hasTransition: true,
-                    transitionType: PageTransitionType.fade,
-                    duration: Duration(milliseconds: 0),
+        appBar: responsiveVisibility(
+          context: context,
+          tabletLandscape: false,
+          desktop: false,
+        )
+            ? AppBar(
+                backgroundColor:
+                    FlutterFlowTheme.of(context).secondaryBackground,
+                automaticallyImplyLeading: false,
+                leading: FlutterFlowIconButton(
+                  borderColor: Colors.transparent,
+                  borderRadius: 30.0,
+                  borderWidth: 1.0,
+                  buttonSize: 60.0,
+                  icon: Icon(
+                    Icons.arrow_back_rounded,
+                    color: FlutterFlowTheme.of(context).primaryText,
+                    size: 30.0,
                   ),
-                },
-              );
-            },
-          ),
-          title: Text(
-            'Profile',
-            style: FlutterFlowTheme.of(context).bodyLarge.override(
-                  fontFamily: 'Inter',
-                  letterSpacing: 0.0,
+                  onPressed: () async {
+                    context.pushNamed(
+                      'HomePage',
+                      extra: <String, dynamic>{
+                        kTransitionInfoKey: const TransitionInfo(
+                          hasTransition: true,
+                          transitionType: PageTransitionType.fade,
+                          duration: Duration(milliseconds: 0),
+                        ),
+                      },
+                    );
+                  },
                 ),
-          ),
-          actions: const [],
-          centerTitle: false,
-          elevation: 0.0,
-        ),
+                title: Text(
+                  FFLocalizations.of(context).getText(
+                    'ahh8hc5k' /* Profile */,
+                  ),
+                  style: FlutterFlowTheme.of(context).bodyLarge.override(
+                        fontFamily: 'Inter',
+                        letterSpacing: 0.0,
+                      ),
+                ),
+                actions: const [],
+                centerTitle: false,
+                elevation: 0.0,
+              )
+            : null,
         body: SafeArea(
           top: true,
           child: Column(
@@ -139,7 +150,9 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'Joy Augustin',
+                                FFLocalizations.of(context).getText(
+                                  'zogqjvuj' /* Joy Augustin */,
+                                ),
                                 style: FlutterFlowTheme.of(context)
                                     .headlineSmall
                                     .override(
@@ -151,7 +164,9 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                 padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 4.0, 0.0, 0.0),
                                 child: Text(
-                                  'joy@augustin.com',
+                                  FFLocalizations.of(context).getText(
+                                    'kbgr243s' /* joy@augustin.com */,
+                                  ),
                                   style: FlutterFlowTheme.of(context)
                                       .labelMedium
                                       .override(
@@ -171,7 +186,9 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
               Padding(
                 padding: const EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 0.0, 0.0),
                 child: Text(
-                  'Account',
+                  FFLocalizations.of(context).getText(
+                    '81i5tudn' /* Account */,
+                  ),
                   style: FlutterFlowTheme.of(context).labelLarge.override(
                         fontFamily: 'Inter',
                         letterSpacing: 0.0,
@@ -213,7 +230,9 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                             padding: const EdgeInsetsDirectional.fromSTEB(
                                 12.0, 0.0, 0.0, 0.0),
                             child: Text(
-                              'Payment Options',
+                              FFLocalizations.of(context).getText(
+                                'c2uw8f26' /* Payment Options */,
+                              ),
                               style: FlutterFlowTheme.of(context)
                                   .bodyLarge
                                   .override(
@@ -271,7 +290,9 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                             padding: const EdgeInsetsDirectional.fromSTEB(
                                 12.0, 0.0, 0.0, 0.0),
                             child: Text(
-                              'Country',
+                              FFLocalizations.of(context).getText(
+                                'lgbpaapu' /* Country */,
+                              ),
                               style: FlutterFlowTheme.of(context)
                                   .bodyLarge
                                   .override(
@@ -329,7 +350,9 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                             padding: const EdgeInsetsDirectional.fromSTEB(
                                 12.0, 0.0, 0.0, 0.0),
                             child: Text(
-                              'Notification Settings',
+                              FFLocalizations.of(context).getText(
+                                '35krs6ox' /* Notification Settings */,
+                              ),
                               style: FlutterFlowTheme.of(context)
                                   .bodyLarge
                                   .override(
@@ -387,7 +410,9 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                             padding: const EdgeInsetsDirectional.fromSTEB(
                                 12.0, 0.0, 0.0, 0.0),
                             child: Text(
-                              'Edit Profile',
+                              FFLocalizations.of(context).getText(
+                                'ia0ue8ff' /* Edit Profile */,
+                              ),
                               style: FlutterFlowTheme.of(context)
                                   .bodyLarge
                                   .override(
@@ -413,7 +438,9 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
               Padding(
                 padding: const EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 0.0, 0.0),
                 child: Text(
-                  'General',
+                  FFLocalizations.of(context).getText(
+                    'hnvwy747' /* General */,
+                  ),
                   style: FlutterFlowTheme.of(context).labelLarge.override(
                         fontFamily: 'Inter',
                         letterSpacing: 0.0,
@@ -455,7 +482,9 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                             padding: const EdgeInsetsDirectional.fromSTEB(
                                 12.0, 0.0, 0.0, 0.0),
                             child: Text(
-                              'Support',
+                              FFLocalizations.of(context).getText(
+                                '5vw107a4' /* Support */,
+                              ),
                               style: FlutterFlowTheme.of(context)
                                   .bodyLarge
                                   .override(
@@ -513,7 +542,9 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                             padding: const EdgeInsetsDirectional.fromSTEB(
                                 12.0, 0.0, 0.0, 0.0),
                             child: Text(
-                              'Terms of Service',
+                              FFLocalizations.of(context).getText(
+                                'sjrmsg1e' /* Terms of Service */,
+                              ),
                               style: FlutterFlowTheme.of(context)
                                   .bodyLarge
                                   .override(
@@ -571,7 +602,9 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                             padding: const EdgeInsetsDirectional.fromSTEB(
                                 12.0, 0.0, 0.0, 0.0),
                             child: Text(
-                              'Invite Friends',
+                              FFLocalizations.of(context).getText(
+                                'r9svrlo1' /* Invite Friends */,
+                              ),
                               style: FlutterFlowTheme.of(context)
                                   .bodyLarge
                                   .override(

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "377306654590",
+    "project_id": "accesibilidad-y-disenyo",
+    "storage_bucket": "accesibilidad-y-disenyo.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:377306654590:android:308d4e845821a3b85e352f",
+        "android_client_info": {
+          "package_name": "com.mycompany.accp2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGsVz8ftrrktMBTBHcmdUI6zU6W3u7sKA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
